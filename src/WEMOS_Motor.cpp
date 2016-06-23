@@ -6,9 +6,14 @@ address:
 freq:
 	PWM's frequency		
 */
-Motor::Motor(uint8_t address, uint32_t freq)
+Motor::Motor(uint8_t address, uint8_t motor, uint32_t freq)
 {
 	_use_STBY_IO=false;
+
+	if(motor==_MOTOR_A)
+		_motor=_MOTOR_A;
+	else
+		_motor=_MOTOR_B;
 
 	Wire.begin();
 	
@@ -19,10 +24,18 @@ Motor::Motor(uint8_t address, uint32_t freq)
 }
 
 
-Motor::Motor(uint8_t address, uint32_t freq, uint8_t STBY_IO)
+Motor::Motor(uint8_t address, uint8_t motor, uint32_t freq, uint8_t STBY_IO)
 {
+	
+	
+
 	_use_STBY_IO=true;
 	_STBY_IO=STBY_IO;
+
+	if(motor==_MOTOR_A)
+		_motor=_MOTOR_A;
+	else
+		_motor=_MOTOR_B;
 
 	Wire.begin();
 	
@@ -69,20 +82,23 @@ pwm_val:
 	0.00 - 100.00  (%)
 
 */
-void Motor::setmotor(uint8_t motor, uint8_t dir, float pwm_val)
+void Motor::setmotor(uint8_t dir, float pwm_val)
 {
 	uint16_t _pwm_val;
 
 	if(_use_STBY_IO==true){
 
 		if(dir==_STANDBY)
-		digitalWrite(_STBY_IO,LOW);
-	else
-		digitalWrite(_STBY_IO,HIGH);
+		{
+			digitalWrite(_STBY_IO,LOW);
+			return;
+		}
+		else
+			digitalWrite(_STBY_IO,HIGH);
 	}
 	
 	Wire.beginTransmission(_address);
-	Wire.write(motor | (byte)0x10);
+	Wire.write(_motor | (byte)0x10);
 	Wire.write(dir);
 
 	_pwm_val=uint16_t(pwm_val*100);
@@ -96,4 +112,9 @@ void Motor::setmotor(uint8_t motor, uint8_t dir, float pwm_val)
 
 
 	delay(100);
+}
+
+void Motor::setmotor(uint8_t dir)
+{
+	setmotor(dir,100);
 }
