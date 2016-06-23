@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For Motor
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Motor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setfreq	KEYWORD2
+setmotor	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+_SHORT_BRAKE	LITERAL1
+_CCW	LITERAL1
+_CW	LITERAL1
+_STOP	LITERAL1
+_STANDBY	LITERAL1
+_MOTOR_A	LITERAL1
+_MOTOR_B	LITERAL1
+
+
