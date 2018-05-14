@@ -57,7 +57,7 @@ freq:
 void Motor::setfreq(uint32_t freq)
 {
 	Wire.beginTransmission(_address);
-	Wire.write(((byte)(freq >> 16)) & (byte)0x0f);
+	Wire.write(((byte)(freq >> 24)) & (byte)0x0f);
 	Wire.write((byte)(freq >> 16));
 	Wire.write((byte)(freq >> 8));
 	Wire.write((byte)freq);
