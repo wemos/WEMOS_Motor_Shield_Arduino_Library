@@ -62,7 +62,7 @@ void Motor::setfreq(uint32_t freq)
 	Wire.write((byte)(freq >> 8));
 	Wire.write((byte)freq);
 	Wire.endTransmission();     // stop transmitting
-	delay(100);
+	//delay(100);
 }
 
 /* setmotor() -- set motor
@@ -111,7 +111,7 @@ void Motor::setmotor(uint8_t dir, float pwm_val)
 	Wire.endTransmission();     // stop transmitting
 
 
-	delay(100);
+	//delay(100);
 }
 
 void Motor::setmotor(uint8_t dir)
