@@ -8,6 +8,9 @@ freq:
 */
 Motor::Motor(uint8_t address, uint8_t motor, uint32_t freq)
 {
+
+	Wire.begin();
+	
 	_use_STBY_IO=false;
 
 	if(motor==_MOTOR_A)
@@ -15,7 +18,7 @@ Motor::Motor(uint8_t address, uint8_t motor, uint32_t freq)
 	else
 		_motor=_MOTOR_B;
 
-	Wire.begin();
+	
 	
 	_address=address;
 
