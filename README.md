@@ -27,7 +27,7 @@ void loop() {
 ### Step 2
 
 Solder RTS and 3V on the Motor Shield. This activates the reprogramming mode of the Motor Shield. Then build this circuit:
-![Image of circuit to update the firmware](https://octodex.github.com/images/yaktocat.png)
+![Image of circuit to update the firmware](https://github.com/thomasfredericks/wemos_motor_shield/blob/master/doc/wemos_motor_update_firmware.png?raw=true)
 
 ### Step 3
 
