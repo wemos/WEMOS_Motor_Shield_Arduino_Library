@@ -3,9 +3,9 @@ Arduino library for the Wemos D1 mini Motor Shield (i2c interface, TB6612 based)
 
 ## Firmware Warning
 
-WARNING: The shipped firmware with the Motor Shield is bugged. You need to update it. You can update it from Windows with a D1 Mini.
+WARNING: The shipped firmware with the Motor Shield is bugged. You need to update it. You can update it from Windows with a D1 Mini. You can find the update instructions below.
 
-## Update the firmware (from Windows)
+## Update the Firmware (from Windows)
 
 ### Step 1 
 
