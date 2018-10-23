@@ -41,7 +41,7 @@ Download the motor_shield.bin: https://cdn.hackaday.io/files/18439788894176/moto
 
 Extract and put in the same directory as ```stm32flash.exe``` downloaded in the step above.
 
-### Step 4
+### Step 5
 
 Execute the following commands. IMPORTANT: Replace COM8 with the port of your Wemos D1 Mini.
 
@@ -57,6 +57,10 @@ Execute the following commands. IMPORTANT: Replace COM8 with the port of your We
 ```stm32flash.exe -f -v -w motor_shield.bin COM8``` This will flash the bin and re-lock the shield, replace COM8 with the port of your Wemos D1 Mini.
 
 ![image of stm32flash.exe -f -v -w motor_shield.bin result](https://github.com/thomasfredericks/wemos_motor_shield/blob/master/doc/update_command_c.png?raw=true)
+
+### Step 6
+
+Disconnect everything and unsolder RTS and 3V on the Wemos Motor Shield.
 
 ### Sources
 
