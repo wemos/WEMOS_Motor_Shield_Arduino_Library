@@ -48,15 +48,15 @@ Execute the following commands. IMPORTANT: Replace COM8 with the port of your We
 
 ```stm32flash.exe COM8``` Replace COM8 with the port of your Wemos D1 Mini.
 
-![image of stm32flash.exe result](https://octodex.github.com/images/yaktocat.png)
+![image of stm32flash.exe result](https://github.com/thomasfredericks/wemos_motor_shield/blob/master/doc/update_command_a.png?raw=true)
 
 ```stm32flash.exe -k COM8``` This will unlock your shield, replace COM8 with the port of your Wemos D1 Mini
 
-![image of stm32flash.exe -k result](https://octodex.github.com/images/yaktocat.png)
+![image of stm32flash.exe -k result](https://github.com/thomasfredericks/wemos_motor_shield/blob/master/doc/update_command_b.png?raw=true)
 
 ```stm32flash.exe -f -v -w motor_shield.bin COM8``` This will flash the bin and re-lock the shield, replace COM8 with the port of your Wemos D1 Mini.
 
-![image of stm32flash.exe -f -v -w motor_shield.bin result](https://octodex.github.com/images/yaktocat.png)
+![image of stm32flash.exe -f -v -w motor_shield.bin result](https://github.com/thomasfredericks/wemos_motor_shield/blob/master/doc/update_command_c.png?raw=true)
 
 ### Sources
 
