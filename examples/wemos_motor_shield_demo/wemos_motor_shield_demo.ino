@@ -24,11 +24,12 @@ void loop() {
 
   int pwm;
 
-  Serial.println("for (pwm = 0; pwm <= 100; pwm++) { M1.setmotor( _CW, pwm); M2.setmotor(_CW, 100-pwm); }");
   for (pwm = 0; pwm <= 100; pwm++)
   {
     M1.setmotor( _CW, pwm);
-    M2.setmotor(_CW, 100 - pwm);
+    M2.setmotor(_CW, pwm);
+    Serial.print("Clockwise PWM: ");
+    Serial.println(pwm);
     delay(100);
   }
 
@@ -38,25 +39,17 @@ void loop() {
 
   delay(1000);
 
-  Serial.println("for (pwm = 0; pwm <= 100; pwm++) { M1.setmotor(_CCW, pwm); M2.setmotor(_CCW, 100-pwm); }");
+  
   for (pwm = 0; pwm <= 100; pwm++)
   {
     M1.setmotor(_CCW, pwm);
-    M2.setmotor(_CCW, 100 - pwm);
+    //delay(1);
+    M2.setmotor(_CCW, pwm);
+    Serial.print("Counterclockwise PWM: ");
+    Serial.println(pwm);
     delay(100);
 
   }
-
-  Serial.println("Motor STOP");
-  M1.setmotor(_STOP);
-  M2.setmotor( _STOP);
-  delay(1000);
-
-
-  Serial.println("Motor A&B SHORT BRAKE");
-  M1.setmotor(_SHORT_BRAKE);
-  M2.setmotor( _SHORT_BRAKE);
-  delay(1000);
 
   Serial.println("Motor A&B STANDBY");
   M1.setmotor(_STANDBY);
