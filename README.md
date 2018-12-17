@@ -5,6 +5,12 @@ Arduino library for the Wemos D1 mini Motor Shield (i2c interface, TB6612 based)
 
 WARNING: The shipped firmware with the Motor Shield is bugged. You need to update it. You can update it from Windows with a D1 Mini. You can find the update instructions below.
 
+### Sources
+
+* https://www.letscontrolit.com/wiki/index.php/WemosMotorshield
+* https://github.com/pbugalski/wemos_motor_shield
+* https://hackaday.io/project/18439-motor-shield-reprogramming
+
 ## Update the Firmware (from Windows)
 
 ### Step 1 
@@ -68,8 +74,4 @@ This will flash the bin and re-lock the shield, replace COM8 with the port of yo
 
 Disconnect everything and unsolder RTS and 3V on the Wemos Motor Shield.
 
-### Sources
 
-* https://www.letscontrolit.com/wiki/index.php/WemosMotorshield
-* https://github.com/pbugalski/wemos_motor_shield
-* https://hackaday.io/project/18439-motor-shield-reprogramming
