@@ -68,7 +68,7 @@ This will unlock your shield, replace COM8 with the port of your Wemos D1 Mini
 
 This will flash the bin and re-lock the shield, replace COM8 with the port of your Wemos D1 Mini.
 
-![image of stm32flash.exe -f -v -w motor_shield.bin result](https://github.com/thomasfredericks/wemos_motor_shield/blob/master/doc/update_command_c.png?raw=true)
+![image of stm32flash.exe -v -w motor_shield.bin result](https://github.com/thomasfredericks/wemos_motor_shield/blob/master/doc/update_command_c.png?raw=true)
 
 ### Step 6
 
