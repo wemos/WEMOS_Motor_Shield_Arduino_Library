@@ -8,6 +8,9 @@ freq:
 */
 Motor::Motor(uint8_t address, uint8_t motor, uint32_t freq)
 {
+
+	Wire.begin();
+	
 	_use_STBY_IO=false;
 
 	if(motor==_MOTOR_A)
@@ -15,7 +18,7 @@ Motor::Motor(uint8_t address, uint8_t motor, uint32_t freq)
 	else
 		_motor=_MOTOR_B;
 
-	Wire.begin();
+	
 	
 	_address=address;
 
@@ -62,6 +65,7 @@ void Motor::setfreq(uint32_t freq)
 	Wire.write((byte)(freq >> 8));
 	Wire.write((byte)freq);
 	Wire.endTransmission();     // stop transmitting
+	//delay(100);
 }
 
 /* setmotor() -- set motor
@@ -108,6 +112,7 @@ void Motor::setmotor(uint8_t dir, float pwm_val)
 	Wire.write((byte)(_pwm_val >> 8));
 	Wire.write((byte)_pwm_val);
 	Wire.endTransmission();     // stop transmitting
+	//delay(1);
 }
 
 void Motor::setmotor(uint8_t dir)
